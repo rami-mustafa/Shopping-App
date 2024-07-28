@@ -65,5 +65,15 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
+        
+        
+        let product = products[indexPath.row]
+        let detailVC = DetailVC()
+        detailVC.product = product
+        navigationController?.pushViewController(detailVC, animated: true)
+        
+        
     }
+    
+    
 }
