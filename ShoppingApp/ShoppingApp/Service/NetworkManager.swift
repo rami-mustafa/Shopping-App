@@ -88,8 +88,7 @@ class NetworkManager {
 */
 
 
-
-import Foundation
+import UIKit
 
 enum URLs: String {
     case baseUrl = "https://fakestoreapi.com"
@@ -99,6 +98,8 @@ enum URLs: String {
 class NetworkManager {
     static let shared = NetworkManager()
     
+    let cache = NSCache<NSString, UIImage>()
+       
     private init() {}
     
     func getAllProducts(completion: @escaping (Result<[Product], Error>) -> Void) {
@@ -133,5 +134,25 @@ class NetworkManager {
         }
         
         task.resume()
+    }
+    
+    
+    func downloadImage(from urlString: String) async -> UIImage? {
+        let cacheKey = NSString(string: urlString)
+        
+        if let image = cache.object(forKey: cacheKey) {
+            return image
+        }
+        
+        guard let url = URL(string: urlString) else { return nil }
+        
+        do {
+            let (data, _) = try await URLSession.shared.data(from: url)
+            guard let image = UIImage(data: data) else { return nil }
+            cache.setObject(image, forKey: cacheKey)
+            return image
+        } catch {
+            return nil
+        }
     }
 }
