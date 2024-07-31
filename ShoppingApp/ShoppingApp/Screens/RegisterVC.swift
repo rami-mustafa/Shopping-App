@@ -19,17 +19,7 @@ class RegisterVC: UIViewController {
     private let signUpButton  = SAButton(title: "Sign Up", hasBackground: true , fontSize: .big)
     private let signInButton  = SAButton(title: "Already have an account? Sign In." , fontSize: .medium)
     
-    
-    private let termsTextView: UITextView = {
-        let tv = UITextView()
-        tv.text = "dsbfdsbfkdsbfkdsbfk kdsbfnksdkfbsd ksdnfksdkf ksdnfksdf dnsfksdnfnds knbdsfknbdskf kdnsfksnfkns dsnbfksdf "
-        tv.backgroundColor = .clear
-        tv.textColor       = .label
-        tv.isSelectable    = true
-        tv.isEditable      = false
-        tv.isScrollEnabled = false
-       return tv
-    }()
+
 
     // MARK: - LifeCycle
         override func viewDidLoad() {
@@ -45,8 +35,7 @@ class RegisterVC: UIViewController {
         view.backgroundColor = .systemGray4
 
         
-        view.backgroundColor = .white
-        [headerView , usernameField , passwordField , emailField , signUpButton , signInButton , termsTextView ].forEach { box in
+         [headerView , usernameField , passwordField , emailField , signUpButton , signInButton  ].forEach { box in
             view.addSubview(box)
         }
         
@@ -95,17 +84,10 @@ class RegisterVC: UIViewController {
             make.width.equalTo(view).multipliedBy(0.85)
         }
         
-        termsTextView.snp.makeConstraints { make in
-            make.top.equalTo(signUpButton.snp.bottom).offset(6)
-            make.height.equalTo(50)
-            
-            
-            make.centerX.equalTo(headerView)
-            make.width.equalTo(view).multipliedBy(0.85)
-        }
+        
 
         signInButton.snp.makeConstraints { make in
-            make.top.equalTo(termsTextView.snp.bottom).offset(11)
+            make.top.equalTo(signUpButton.snp.bottom).offset(6)
             make.height.equalTo(40)
             
             
