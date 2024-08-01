@@ -11,7 +11,7 @@ import UIKit
 class ProductCell: UICollectionViewCell {
     
     private let containerView    = UIView()
-    private let imageView        = UIImageView()
+    private let imageView        = ProductImageView(frame: .zero)
     private let titleLabel       = UILabel()
     private let descriptionLabel = UILabel()
     private let priceLabel       = UILabel()
@@ -46,6 +46,7 @@ class ProductCell: UICollectionViewCell {
 
         
         NSLayoutConstraint.activate([
+            
             containerView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
             containerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
             containerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
@@ -92,7 +93,6 @@ class ProductCell: UICollectionViewCell {
         priceLabel.textColor = .black
         priceLabel.font = UIFont.systemFont(ofSize: 14, weight: .bold)
         priceLabel.textAlignment = .center
- 
 
     }
     
@@ -100,17 +100,6 @@ class ProductCell: UICollectionViewCell {
         titleLabel.text = product.title
         priceLabel.text = "$\(product.price)"
         descriptionLabel.text = product.description
-        
-        
-        // Görseli yüklemek için URLSession kullanarak basit bir image loader
-        if let url = URL(string: product.image) {
-            URLSession.shared.dataTask(with: url) { data, response, error in
-                if let data = data, error == nil {
-                    DispatchQueue.main.async {
-                        self.imageView.image = UIImage(data: data)
-                    }
-                }
-            }.resume()
-        }
+        imageView.downloadImage(fromURL: product.image)
     }
 }
