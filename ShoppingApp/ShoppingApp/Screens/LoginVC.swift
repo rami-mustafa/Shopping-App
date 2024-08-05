@@ -38,7 +38,7 @@ class LoginVC: UIViewController {
         
         setupConstraints()
         
-      
+        
     }
     
     private func setupConstraints() {
@@ -90,8 +90,7 @@ class LoginVC: UIViewController {
     
     // MARK: - Selectors
     @objc private func didTapSignIn() {
-        // Authentication logic here
-        /*
+        
         let loginRequest = LoginUserRequest(
             email: self.emailField.text ?? "",
             password: self.passwordField.text ?? ""
@@ -116,34 +115,32 @@ class LoginVC: UIViewController {
             }
             
             if let sceneDelegate = self.view.window?.windowScene?.delegate as? SceneDelegate {
-                sceneDelegate.checkAuthentication()
+                
+                DispatchQueue.main.async {
+                    let mainTabBar = MainTabBarController()
+                    mainTabBar.modalPresentationStyle = .fullScreen
+                    self.present(mainTabBar, animated: true, completion: nil)
+                }
+                
             }
         }
-        */
+        
     }
     
     @objc private func didTapNewUser() {
-        // Navigate to registration
-        print("didTapNewUser")
-        
-        /*
-        let vc = RegisterController()
+        let vc = RegisterVC()
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
-        */
     }
     
     @objc private func didTapForgotPassword() {
-        // Navigate to forgot password
-        print("didTapForgotPassword")
         
-        print("didTapForgotPassword")
-    /*
-        let vc = ForgotPasswordController()
-        let nav = UINavigationController(rootViewController: vc)
-        nav.modalPresentationStyle = .fullScreen
-        self.present(nav, animated: true, completion: nil)
-        */
+        /*
+         let vc = ForgotPasswordController()
+         let nav = UINavigationController(rootViewController: vc)
+         nav.modalPresentationStyle = .fullScreen
+         self.present(nav, animated: true, completion: nil)
+         */
         
     }
 }
