@@ -97,3 +97,31 @@ extension AlertManager {
         self.showBasicAlert(on: vc, title: "Unknown Error Fetching User", message: nil)
     }
 }
+
+
+
+
+
+// MARK: - Add Category Errors
+extension AlertManager {
+    public static func showCategoryImageAndNameRequiredAlert(on vc: UIViewController) {
+        self.showBasicAlert(on: vc, title: "Error", message: "Image or category name cannot be empty.")
+    }
+
+    public static func showCategoryAlreadyExistsAlert(on vc: UIViewController) {
+        self.showBasicAlert(on: vc, title: "Error", message: "Category already exists. Please choose a different name.")
+    }
+}
+
+
+
+extension AlertManager {
+    
+    public static func showUnableToUploadProduct(on vc: UIViewController){
+        self.showBasicAlert(on: vc, title: "Error", message: "Unable to upload product.")
+    }
+    
+    public static func showMissingFields(on vc: UIViewController){
+        self.showBasicAlert(on: vc, title: "Missing Fields", message: "Please fill out all required fields.")
+    }
+}
