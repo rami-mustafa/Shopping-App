@@ -111,7 +111,7 @@ class RegisterVC: UIViewController {
   
     @objc private func didTapSignUp(){
    
-        /*
+       
         let registerUserRequest = RegiserUserRequest(
                     username: self.usernameField.text ?? "",
                     email: self.emailField.text ?? "",
@@ -146,16 +146,19 @@ class RegisterVC: UIViewController {
                 return
             }
             
+            
+            
             if wasRegistered {
                 if let sceneDelegate = self.view.window?.windowScene?.delegate as? SceneDelegate {
-                    sceneDelegate.checkAuthentication()
+//                    sceneDelegate.checkAuthentication()
+             
                 }
             } else {
                 AlertManager.showRegistrationErrorAlert(on: self)
             }
         }
         
-        */
+         
     }
 
 }
