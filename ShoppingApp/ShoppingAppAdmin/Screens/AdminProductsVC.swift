@@ -13,8 +13,7 @@ class AdminProductsVC: ProductVC {
     
     // MARK: - Variables
     var selectedProduct : Product?
-    
-    
+ 
     // MARK: - UI Components
     private let editCategoryBtn = UIButton()
     private let addProductBtn   = UIButton()
@@ -131,5 +130,21 @@ extension AdminProductsVC {
         vc.modalPresentationStyle = .overCurrentContext
         
         present(vc, animated: true, completion: nil)
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath) as? ProductCell else {
+            fatalError("The dequeued cell is not an instance of ProductCell.")
+        }
+        
+        let product = products[indexPath.section]
+        cell.configure(with: product, delegate: self, shouldShowFavoriteButton: showFavorites)
+        
+        cell.contentView.backgroundColor = .clrSecondaryBlack
+        cell.layer.cornerRadius = 24
+        cell.layer.masksToBounds = true
+        
+        cell.contentView.frame = cell.bounds.insetBy(dx: 16, dy: 10)
+        return cell
     }
 }

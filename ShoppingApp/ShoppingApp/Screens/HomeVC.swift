@@ -20,7 +20,7 @@ class HomeVC: UIViewController {
     var listener : ListenerRegistration!
 
     // MARK: - UI Components
-    private let logOutButton = SAButton(title: "logOut", hasBackground: false, fontSize: .medium)
+    let logOutButton = SAButton(title: "logOut", hasBackground: false, fontSize: .medium)
     var collectionView: UICollectionView!
 
     
@@ -180,8 +180,6 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectedCategory = categories[indexPath.item]
  
-        
- 
         let productVC = ProductVC()
         productVC.category = selectedCategory
         productVC.showFavorites = false
@@ -192,42 +190,3 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource {
 
 
 
-
-
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        collectionView.deselectItem(at: indexPath, animated: true)
-//        let product = products[indexPath.row]
-//        let detailVC = DetailVC()
-//        detailVC.product = product
-//        navigationController?.pushViewController(detailVC, animated: true)
-//    }
-
-
-
-/**
-
-func fetchDocument() {
-    
-
-
-    let db = Firestore.firestore()
-    
- 
-    listener = docRef.addSnapshotListener { (snap, error) in
-        guard let documents = snap?.documents else {
-            print("Error fetching document: \(error!)")
-            return
-        }
-               self.categories.removeAll()
-         
-        
-               for document in documents {
-                   let data = document.data()
-                   let newCategory = Category.init(data: data)
-                   self.categories.append(newCategory)
-               }
-               self.collectionView.reloadData()
-           }
-
-}
- */

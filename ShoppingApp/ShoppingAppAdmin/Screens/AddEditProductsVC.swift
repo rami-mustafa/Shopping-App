@@ -66,6 +66,7 @@ class AddEditProductsVC: UIViewController {
         priceProductTF.layer.cornerRadius = 10
         priceProductTF.borderStyle = .roundedRect
         priceProductTF.clipsToBounds = true
+        priceProductTF.textColor = UIColor.white 
         let placeholderText = "Product Price"
         let attributesForPrice: [NSAttributedString.Key: Any] = [
             .foregroundColor: UIColor.white,

@@ -17,6 +17,8 @@ class AdminHomeVC: HomeVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+                
+        logOutButton.isHidden = true
         
         view.backgroundColor = AppColors.Background
         setupNavigationBar()
@@ -62,50 +64,16 @@ class AdminHomeVC: HomeVC {
     
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectedCategory = categories[indexPath.item]
         
+        let selectedCategory = categories[indexPath.row]
+
+        print( "MMM ",selectedCategory)
         let adminProductsVC = AdminProductsVC()
         adminProductsVC.modalPresentationStyle = .fullScreen
         adminProductsVC.category = selectedCategory
+        adminProductsVC.showFavorites = false
         present(adminProductsVC, animated: true)
     }
 }
 
 
-
-
-
-//
-//class AdminHomeVC: HomeVC {
-//
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
-//
-//
-//        setupNavigationBar()
-//    }
-//
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        navigationController?.setNavigationBarHidden(false, animated: animated)
-//    }
-//    func setupNavigationBar() {
-//        title = "Admin"
-//
-//        let addCategoryBtn = UIBarButtonItem(title: "Add Category", style: .plain, target: self, action: #selector(addCategory))
-//        navigationItem.rightBarButtonItem = addCategoryBtn
-//    }
-//
-//    @objc func addCategory() {
-//        // Kategori ekleme işlemini burada yapın
-//        print("Add Category tapped")
-//
-//        let VC = AddEditCategoryVC()
-//        navigationController?.pushViewController(VC, animated: true)
-//    }
-//
-//
-//
-//}
-//

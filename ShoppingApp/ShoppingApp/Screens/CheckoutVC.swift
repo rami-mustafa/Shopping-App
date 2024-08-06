@@ -94,9 +94,7 @@ class CheckoutVC: UIViewController , CartItemDelegate{
     
     func removeItem(product: Product) {
         StripeCart.removeItemFromCart(item: product)
-   
-
-
+        setupPaymentInfo()
     }
 }
 

@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         Auth.auth().addStateDidChangeListener { [weak self] auth, user in
             DispatchQueue.main.async {
                 if user != nil {
-                    self?.window?.rootViewController = MainViewController()
+                    self?.window?.rootViewController = MainTabBarController()
                 } else {
                     self?.window?.rootViewController = LoginVC()
                 }

@@ -18,12 +18,12 @@ class AddEditCategoryVC: UIViewController {
     
     
     // MARK: - UI Components
-   private let titleLabel =  UILabel()
-   private var nameTxt: UITextField!
-   private var categoryImg = UIImageView()
+   private let titleLabel        =  UILabel()
+   private var nameTxt           =  UITextField()
+   private var categoryImg       = UIImageView()
    private let activityIndicator = UIActivityIndicatorView(style: .large)
-   private let addBtn =  UIButton()
-   private let subTitleLabel = UILabel()
+   private let addBtn            =  UIButton()
+   private let subTitleLabel     = UILabel()
     
     
     
@@ -55,9 +55,20 @@ class AddEditCategoryVC: UIViewController {
         titleLabel.textAlignment = .center
         view.addSubview(titleLabel)
         
-        nameTxt = UITextField()
-        nameTxt.borderStyle = .roundedRect
+    
+        
+        
         nameTxt.placeholder = "Gategory Name"
+        nameTxt.backgroundColor = .clrTextSecondary
+        nameTxt.layer.cornerRadius = 10
+        nameTxt.borderStyle = .roundedRect
+        nameTxt.clipsToBounds = true
+        let placeholderText = "Gategory Name"
+        let attributesForPrice: [NSAttributedString.Key: Any] = [
+            .foregroundColor: UIColor.white,
+            .font: UIFont.systemFont(ofSize: 14)
+        ]
+        nameTxt.attributedPlaceholder = NSAttributedString(string: placeholderText, attributes: attributesForPrice)
         view.addSubview(nameTxt)
         
         
@@ -68,9 +79,11 @@ class AddEditCategoryVC: UIViewController {
         
         categoryImg.isUserInteractionEnabled = true
         categoryImg.contentMode = .scaleAspectFill
-        categoryImg.backgroundColor = .red
         categoryImg.layer.cornerRadius = 20
         categoryImg.clipsToBounds = true
+        categoryImg.image = UIImage(systemName: "camera.shutter.button")
+        categoryImg.tintColor = .white
+        categoryImg.contentMode = .center
         let tap = UITapGestureRecognizer(target: self, action: #selector(imgTapped(_:)))
         tap.numberOfTapsRequired = 1
         categoryImg.addGestureRecognizer(tap)

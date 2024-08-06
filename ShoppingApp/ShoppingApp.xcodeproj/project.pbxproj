@@ -32,7 +32,6 @@
 		381C107D2C5BF29D006ECC70 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 381C107C2C5BF29D006ECC70 /* GoogleService-Info.plist */; };
 		381C10802C5BF9BF006ECC70 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381C107F2C5BF9BF006ECC70 /* AlertManager.swift */; };
 		381C10822C5BF9DA006ECC70 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381C10812C5BF9DA006ECC70 /* Validator.swift */; };
-		381C10842C5BF9F1006ECC70 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381C10832C5BF9F1006ECC70 /* AuthService.swift */; };
 		381C10862C5BFA0F006ECC70 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381C10852C5BFA0F006ECC70 /* User.swift */; };
 		381C10882C5BFA34006ECC70 /* LoginUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381C10872C5BFA34006ECC70 /* LoginUserRequest.swift */; };
 		381C108A2C5BFA41006ECC70 /* RegiserUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381C10892C5BFA41006ECC70 /* RegiserUserRequest.swift */; };
@@ -41,7 +40,6 @@
 		381C108F2C5C0AF7006ECC70 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381C107F2C5BF9BF006ECC70 /* AlertManager.swift */; };
 		381C10912C5C0B21006ECC70 /* SATextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381C104B2C5ABBA2006ECC70 /* SATextField.swift */; };
 		381C10922C5C0B26006ECC70 /* SAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381C10482C5ABB5E006ECC70 /* SAButton.swift */; };
-		381C10932C5C0B3D006ECC70 /* AuthHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381C104F2C5ABCCB006ECC70 /* AuthHeaderView.swift */; };
 		381C10942C5C0B56006ECC70 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387680732C557AAB008AED3D /* Product.swift */; };
 		381C10962C5C0B5C006ECC70 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381C10852C5BFA0F006ECC70 /* User.swift */; };
 		381C10972C5C0B5F006ECC70 /* LoginUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381C10872C5BFA34006ECC70 /* LoginUserRequest.swift */; };
@@ -58,7 +56,6 @@
 		387680562C5554BC008AED3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 387680542C5554BC008AED3D /* LaunchScreen.storyboard */; };
 		387680652C5562B4008AED3D /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387680642C5562B4008AED3D /* HomeVC.swift */; };
 		387680672C5562CD008AED3D /* CartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387680662C5562CD008AED3D /* CartVC.swift */; };
-		3876806B2C5565A0008AED3D /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3876806A2C5565A0008AED3D /* ProfileVC.swift */; };
 		3876806F2C556ACF008AED3D /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3876806E2C556ACF008AED3D /* CustomTabBar.swift */; };
 		387680742C557AAB008AED3D /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387680732C557AAB008AED3D /* Product.swift */; };
 		387680762C557FA2008AED3D /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387680752C557FA2008AED3D /* ProductCell.swift */; };
@@ -78,18 +75,20 @@
 		38BFB8012C5FA09A00699E4B /* AddEditProductsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BFB8002C5FA09A00699E4B /* AddEditProductsVC.swift */; };
 		38BFB8032C5FA0AB00699E4B /* AdminProductsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BFB8022C5FA0AB00699E4B /* AdminProductsVC.swift */; };
 		38BFB8062C600CCD00699E4B /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BFB8052C600CCD00699E4B /* FirebaseManager.swift */; };
-		38BFB8082C61218900699E4B /* StripeApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BFB8072C61218900699E4B /* StripeApi.swift */; };
 		38BFB80E2C6129F700699E4B /* Stripe in Frameworks */ = {isa = PBXBuildFile; productRef = 38BFB80D2C6129F700699E4B /* Stripe */; };
 		38BFB8102C6129F700699E4B /* StripeCardScan in Frameworks */ = {isa = PBXBuildFile; productRef = 38BFB80F2C6129F700699E4B /* StripeCardScan */; };
 		38BFB8122C612D4700699E4B /* CheckoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BFB8112C612D4700699E4B /* CheckoutVC.swift */; };
 		38BFB8142C612F0E00699E4B /* SummaryLabelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BFB8132C612F0E00699E4B /* SummaryLabelsView.swift */; };
-		38BFB8162C61409700699E4B /* StripeCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BFB8152C61409700699E4B /* StripeCart.swift */; };
 		38BFB8182C61545300699E4B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BFB8172C61545300699E4B /* Extensions.swift */; };
-		38BFB81A2C616D4D00699E4B /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BFB8192C616D4D00699E4B /* CheckoutViewController.swift */; };
 		38BFB81C2C616DAA00699E4B /* StripeApplePay in Frameworks */ = {isa = PBXBuildFile; productRef = 38BFB81B2C616DAA00699E4B /* StripeApplePay */; };
 		38BFB81E2C616DAA00699E4B /* StripeFinancialConnections in Frameworks */ = {isa = PBXBuildFile; productRef = 38BFB81D2C616DAA00699E4B /* StripeFinancialConnections */; };
 		38BFB8202C616DAA00699E4B /* StripeIdentity in Frameworks */ = {isa = PBXBuildFile; productRef = 38BFB81F2C616DAA00699E4B /* StripeIdentity */; };
-		38BFB8222C616DDF00699E4B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BFB8212C616DDF00699E4B /* MainViewController.swift */; };
+		38BFB8262C6197FB00699E4B /* StripeCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BFB8152C61409700699E4B /* StripeCart.swift */; };
+		38BFB8272C61983B00699E4B /* AuthHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381C104F2C5ABCCB006ECC70 /* AuthHeaderView.swift */; };
+		38BFB8282C6198FA00699E4B /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381C10832C5BF9F1006ECC70 /* AuthService.swift */; };
+		38BFB8292C619D5A00699E4B /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381C10832C5BF9F1006ECC70 /* AuthService.swift */; };
+		38BFB82A2C619D7100699E4B /* StripeCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BFB8152C61409700699E4B /* StripeCart.swift */; };
+		38BFB82B2C619D7400699E4B /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BFB8052C600CCD00699E4B /* FirebaseManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -126,7 +125,6 @@
 		387680572C5554BC008AED3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		387680642C5562B4008AED3D /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		387680662C5562CD008AED3D /* CartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartVC.swift; sourceTree = "<group>"; };
-		3876806A2C5565A0008AED3D /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		3876806E2C556ACF008AED3D /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		387680732C557AAB008AED3D /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		387680752C557FA2008AED3D /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
@@ -137,13 +135,10 @@
 		38BFB8002C5FA09A00699E4B /* AddEditProductsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditProductsVC.swift; sourceTree = "<group>"; };
 		38BFB8022C5FA0AB00699E4B /* AdminProductsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminProductsVC.swift; sourceTree = "<group>"; };
 		38BFB8052C600CCD00699E4B /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
-		38BFB8072C61218900699E4B /* StripeApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripeApi.swift; sourceTree = "<group>"; };
 		38BFB8112C612D4700699E4B /* CheckoutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutVC.swift; sourceTree = "<group>"; };
 		38BFB8132C612F0E00699E4B /* SummaryLabelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryLabelsView.swift; sourceTree = "<group>"; };
 		38BFB8152C61409700699E4B /* StripeCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripeCart.swift; sourceTree = "<group>"; };
 		38BFB8172C61545300699E4B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		38BFB8192C616D4D00699E4B /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
-		38BFB8212C616DDF00699E4B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,16 +215,6 @@
 				381C104B2C5ABBA2006ECC70 /* SATextField.swift */,
 			);
 			path = TextFields;
-			sourceTree = "<group>";
-		};
-		381C107E2C5BF9A5006ECC70 /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-				381C10832C5BF9F1006ECC70 /* AuthService.swift */,
-				38BFB8072C61218900699E4B /* StripeApi.swift */,
-				38BFB8152C61409700699E4B /* StripeCart.swift */,
-			);
-			path = Managers;
 			sourceTree = "<group>";
 		};
 		381C108E2C5C0AE2006ECC70 /* Utilities */ = {
@@ -314,7 +299,6 @@
 		387680482C5554B8008AED3D /* ShoppingApp */ = {
 			isa = PBXGroup;
 			children = (
-				381C107E2C5BF9A5006ECC70 /* Managers */,
 				387680602C55617B008AED3D /* Utilities */,
 				3876805E2C556168008AED3D /* Screens */,
 				3876805D2C556152008AED3D /* Support */,
@@ -340,12 +324,9 @@
 				382685572C5EB190006F489F /* Product */,
 				387680642C5562B4008AED3D /* HomeVC.swift */,
 				387680662C5562CD008AED3D /* CartVC.swift */,
-				3876806A2C5565A0008AED3D /* ProfileVC.swift */,
 				381C104D2C5ABBD3006ECC70 /* LoginVC.swift */,
 				381C10512C5ABD94006ECC70 /* RegisterVC.swift */,
 				38BFB8112C612D4700699E4B /* CheckoutVC.swift */,
-				38BFB8192C616D4D00699E4B /* CheckoutViewController.swift */,
-				38BFB8212C616DDF00699E4B /* MainViewController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -410,7 +391,9 @@
 		38BFB8042C600CC400699E4B /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				381C10832C5BF9F1006ECC70 /* AuthService.swift */,
 				38BFB8052C600CCD00699E4B /* FirebaseManager.swift */,
+				38BFB8152C61409700699E4B /* StripeCart.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -554,10 +537,10 @@
 				38BFB7F62C5F901E00699E4B /* ProductImageView.swift in Sources */,
 				38BFB7FA2C5F909F00699E4B /* ProductVC.swift in Sources */,
 				381C108F2C5C0AF7006ECC70 /* AlertManager.swift in Sources */,
+				38BFB8262C6197FB00699E4B /* StripeCart.swift in Sources */,
 				381C10922C5C0B26006ECC70 /* SAButton.swift in Sources */,
 				381C10362C5AB36D006ECC70 /* SceneDelegate.swift in Sources */,
 				38BFB7FF2C5FA08C00699E4B /* AddEditCategoryVC.swift in Sources */,
-				381C10932C5C0B3D006ECC70 /* AuthHeaderView.swift in Sources */,
 				38BFB8012C5FA09A00699E4B /* AddEditProductsVC.swift in Sources */,
 				38BFB7FB2C5F90A200699E4B /* ProductDetailVC.swift in Sources */,
 				381C108D2C5BFF1D006ECC70 /* Constants.swift in Sources */,
@@ -565,8 +548,10 @@
 				38BFB7F52C5F900500699E4B /* CategoryCell.swift in Sources */,
 				381C10912C5C0B21006ECC70 /* SATextField.swift in Sources */,
 				38BFB7F42C5F900200699E4B /* ProductCell.swift in Sources */,
+				38BFB8282C6198FA00699E4B /* AuthService.swift in Sources */,
 				381C10962C5C0B5C006ECC70 /* User.swift in Sources */,
 				38BFB7F82C5F904F00699E4B /* HomeVC.swift in Sources */,
+				38BFB8272C61983B00699E4B /* AuthHeaderView.swift in Sources */,
 				38BFB8032C5FA0AB00699E4B /* AdminProductsVC.swift in Sources */,
 				381C109B2C5C0BAA006ECC70 /* Category.swift in Sources */,
 			);
@@ -577,9 +562,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				381C109E2C5C253F006ECC70 /* MainTabBarController.swift in Sources */,
-				3876806B2C5565A0008AED3D /* ProfileVC.swift in Sources */,
+				38BFB82B2C619D7400699E4B /* FirebaseManager.swift in Sources */,
 				382685562C5E9DF7006F489F /* Firebase+Utils.swift in Sources */,
-				381C10842C5BF9F1006ECC70 /* AuthService.swift in Sources */,
 				381C104C2C5ABBA2006ECC70 /* SATextField.swift in Sources */,
 				387680672C5562CD008AED3D /* CartVC.swift in Sources */,
 				38BFB8122C612D4700699E4B /* CheckoutVC.swift in Sources */,
@@ -588,12 +572,10 @@
 				381C10802C5BF9BF006ECC70 /* AlertManager.swift in Sources */,
 				3876806F2C556ACF008AED3D /* CustomTabBar.swift in Sources */,
 				387680652C5562B4008AED3D /* HomeVC.swift in Sources */,
-				38BFB8162C61409700699E4B /* StripeCart.swift in Sources */,
 				3878C19E2C56925200FB1E1D /* CartCell.swift in Sources */,
-				38BFB8222C616DDF00699E4B /* MainViewController.swift in Sources */,
 				381C10882C5BFA34006ECC70 /* LoginUserRequest.swift in Sources */,
 				381C10522C5ABD94006ECC70 /* RegisterVC.swift in Sources */,
-				38BFB8082C61218900699E4B /* StripeApi.swift in Sources */,
+				38BFB82A2C619D7100699E4B /* StripeCart.swift in Sources */,
 				381C108A2C5BFA41006ECC70 /* RegiserUserRequest.swift in Sources */,
 				381C10492C5ABB5E006ECC70 /* SAButton.swift in Sources */,
 				3876804A2C5554B8008AED3D /* AppDelegate.swift in Sources */,
@@ -605,7 +587,7 @@
 				381C10502C5ABCCB006ECC70 /* AuthHeaderView.swift in Sources */,
 				38BFB8142C612F0E00699E4B /* SummaryLabelsView.swift in Sources */,
 				3848D3272C5D1E06004C0613 /* ProductVC.swift in Sources */,
-				38BFB81A2C616D4D00699E4B /* CheckoutViewController.swift in Sources */,
+				38BFB8292C619D5A00699E4B /* AuthService.swift in Sources */,
 				3876804C2C5554B8008AED3D /* SceneDelegate.swift in Sources */,
 				381C108C2C5BFF11006ECC70 /* Constants.swift in Sources */,
 				381C109A2C5C0B99006ECC70 /* Category.swift in Sources */,
