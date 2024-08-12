@@ -108,6 +108,8 @@ class AdminProductsVC: ProductVC {
      
         let vc = AddEditCategoryVC()
         vc.categoryToEdit = category
+        vc.modalPresentationStyle = .fullScreen
+        
         present(vc, animated: true, completion: nil)
         
     }

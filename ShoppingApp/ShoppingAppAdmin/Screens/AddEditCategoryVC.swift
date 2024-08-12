@@ -18,12 +18,13 @@ class AddEditCategoryVC: UIViewController {
     
     
     // MARK: - UI Components
-   private let titleLabel        =  UILabel()
-   private var nameTxt           =  UITextField()
-   private var categoryImg       = UIImageView()
-   private let activityIndicator = UIActivityIndicatorView(style: .large)
-   private let addBtn            =  UIButton()
-   private let subTitleLabel     = UILabel()
+   private let backButton         = UIButton()
+   private let titleLabel         =  UILabel()
+   private var nameTxt            =  UITextField()
+   private var categoryImg        = UIImageView()
+   private let activityIndicator  = UIActivityIndicatorView(style: .large)
+   private let addBtn             =  UIButton()
+   private let subTitleLabel      = UILabel()
     
     
     
@@ -50,14 +51,19 @@ class AddEditCategoryVC: UIViewController {
  
     func setupViews() {
         
+        
+        let backIcon = UIImage(systemName: "arrowshape.backward.fill")
+        backButton.setImage(backIcon, for: .normal)
+        backButton.tintColor = .white
+        backButton.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
+        view.addSubview(backButton)
+        
+        
         titleLabel.text = "Category Name"
         titleLabel.textColor = .white
         titleLabel.textAlignment = .center
         view.addSubview(titleLabel)
-        
-    
-        
-        
+             
         nameTxt.placeholder = "Gategory Name"
         nameTxt.backgroundColor = .clrTextSecondary
         nameTxt.layer.cornerRadius = 10
@@ -105,6 +111,12 @@ class AddEditCategoryVC: UIViewController {
     }
     
     func setupConstraints() {
+        
+        backButton.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(20)
+            make.left.equalToSuperview().inset(20)
+        }
+        
         
         titleLabel.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(20)
@@ -193,6 +205,12 @@ class AddEditCategoryVC: UIViewController {
             AlertManager.showCategoryImageAndNameRequiredAlert(on: self)
         }
    
+    }
+    
+    
+    
+    @objc private func backButtonTapped() {
+        dismiss(animated: true)
     }
     
 }
